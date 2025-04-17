@@ -10,7 +10,10 @@ const TaskDetails = () => {
 
   const getTaskDetailsById = async () => {
     try {
-      const response = await axiosInstance.get(API_PATHS.TASK.GET_TASK_BY_ID(id));
+      const response = await axiosInstance.get(
+        API_PATHS.TASK.GET_TASK_BY_ID(id)
+      );
+      
       if (response.data) {
         const taskInfo = response.data;
         setTask(taskInfo);
@@ -47,18 +50,29 @@ const TaskDetails = () => {
         <h1 className="text-xl font-bold text-gray-800 mb-4">Task Details</h1>
 
         <div className="space-y-2">
-        <div className="break-words">
-  <p><strong>Title:</strong></p>
-  <p className="whitespace-pre-wrap">{task.title}</p>
-</div>
-<div className="break-words mt-2">
-  <p><strong>Description:</strong></p>
-  <p className="whitespace-pre-wrap">{task.description}</p>
-</div>
+          <div className="break-words">
+            <p>
+              <strong>Title:</strong>
+            </p>
+            <p className="whitespace-pre-wrap">{task.title}</p>
+          </div>
+          <div className="break-words mt-2">
+            <p>
+              <strong>Description:</strong>
+            </p>
+            <p className="whitespace-pre-wrap">{task.description}</p>
+          </div>
 
-          <p><strong>Priority:</strong> {task.priority}</p>
-          <p><strong>Status:</strong> {task.status}</p>
-          <p><strong>Due Date:</strong> {new Date(task.dueDate).toLocaleDateString()}</p>
+          <p>
+            <strong>Priority:</strong> {task.priority}
+          </p>
+          <p>
+            <strong>Status:</strong> {task.status}
+          </p>
+          <p>
+            <strong>Due Date:</strong>{" "}
+            {new Date(task.dueDate).toLocaleDateString()}
+          </p>
 
           <div>
             <strong>Assigned To:</strong>
@@ -83,7 +97,9 @@ const TaskDetails = () => {
                   checked={item.completed}
                   onChange={() => updateTodoChecklist(index)}
                 />
-                <span className={item.completed ? "line-through text-gray-500" : ""}>
+                <span
+                  className={item.completed ? "line-through text-gray-500" : ""}
+                >
                   {item.text}
                 </span>
               </li>
