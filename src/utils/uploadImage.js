@@ -1,6 +1,3 @@
-import { API_PATHS } from "./apiPaths";
-import axiosInstance from "./axiosInstance";
-
 const uploadImage = async (imageFile) => {
   const formData = new FormData();
   formData.append("image", imageFile);
@@ -14,11 +11,11 @@ const uploadImage = async (imageFile) => {
         },
       }
     );
-    return response.data;
+    // Ensure the image URL uses HTTPS
+    const imageUrl = response.data.imageUrl.replace("http://", "https://");
+    return { ...response.data, imageUrl };
   } catch (error) {
     console.log("error uploading the image", error);
     throw error;
   }
 };
-
-export default uploadImage;
