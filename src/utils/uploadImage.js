@@ -19,3 +19,5 @@ const uploadImage = async (imageFile) => {
     throw error;
   }
 };
+
+export default uploadImage;
