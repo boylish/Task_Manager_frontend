@@ -15,7 +15,7 @@ const CreateTask = () => {
     <div className="flex h-screen bg-gray-100">
       <Sidebar isOpen={isSidebarOpen} />
       <main className="flex-1 p-6 overflow-auto">
-        <Navbar title={"All Users"}  />
+        <Navbar title={"All Users"} onToggleSidebar={handleToggleSidebar}  />
         <div className="bg-white p-6 rounded-xl shadow-sm">
          <Allusers/>
           <Outlet />
