@@ -66,7 +66,7 @@ const Signup = () => {
     <AuthLayout>
       <div className="w-full max-w-md mx-auto flex flex-col gap-10">
         <div className="flex flex-col">
-          <h2 className=" text-xl lg:text-3xl font-semibold mb-2">Create Account</h2>
+          <h2 className=" text-md font-semibold mb-2">Create Account</h2>
           <h4 className="text-gray-600">Please fill the form to sign up</h4>
         </div>
 
