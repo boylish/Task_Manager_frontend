@@ -115,7 +115,7 @@ const Signup = () => {
             <input
               type="text"
               name="adminInviteToken"
-              placeholder="Admin Token (if any)"
+              placeholder="08790879 <-"
               value={formData.adminInviteToken}
               onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
