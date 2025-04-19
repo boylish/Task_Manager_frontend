@@ -88,6 +88,7 @@ const CreateTaskDashboard = () => {
       "Are you sure you want to delete this task?"
     );
     if (!confirm) return;
+    navigate("/admin/dashboard");
 
     try {
       await axiosInstance.delete(API_PATHS.TASK.DELETE_TASK(taskId));
