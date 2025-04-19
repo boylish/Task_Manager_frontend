@@ -65,9 +65,7 @@ const Signup = () => {
   return (
     <AuthLayout>
       <div className="w-full max-w-md mx-auto flex flex-col gap-10">
-        <div className="flex flex-col">
-          <h4 className="text-gray-600">Please fill the form to sign up</h4>
-        </div>
+        
 
         <form onSubmit={handleSubmit} className="space-y-6">
 
