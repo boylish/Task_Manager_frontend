@@ -131,15 +131,9 @@ const SelectUsers = ({ selectedUsers = [], setSelectedUsers }) => {
                         className="h-4 w-4 mr-3"
                       />
                       <div className="flex items-center flex-1">
-                        {user.profileImage?.startsWith("http") ? (
-                          <img
-                            src={user.profileImage}
-                            alt="Profile"
-                            className="h-10 w-10 rounded-full mr-3"
-                          />
-                        ) : (
+                      
                           <FaUserCircle className="text-3xl text-gray-400 mr-3" />
-                        )}
+                        
                         <div>
                           <div className="font-medium">{user.name || 'No name'}</div>
                           <div className="text-sm text-gray-500">{user.email}</div>
