@@ -71,14 +71,6 @@ const Signup = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <ProfilePhotoSelector
-              image={formData.profileImage}
-              setImage={(img) =>
-                setFormData({ ...formData, profileImage: img })
-              }
-            ></ProfilePhotoSelector>
-          </div>
 
           <div>
             <label className="block mb-1 font-medium">Name</label>
