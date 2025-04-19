@@ -64,7 +64,7 @@ const CreateTaskDashboard = () => {
         ...taskData,
         dueDate: new Date(taskData.dueDate).toISOString(),
       });
-      console.log(taskData);
+      navigate("/admin/dashboard");
     } catch (error) {
       console.error("Create task error:", error);
     }
@@ -76,7 +76,7 @@ const CreateTaskDashboard = () => {
         ...taskData,
         dueDate: new Date(taskData.dueDate).toISOString(),
       });
-      console.log("update ho gya");
+     
       navigate("/admin/dashboard");
     } catch (error) {
       console.error("Update task error:", error);
