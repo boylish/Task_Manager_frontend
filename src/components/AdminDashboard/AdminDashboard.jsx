@@ -45,8 +45,7 @@ const AdminDashboard = () => {
       if (response.data) {
         setDashboardData(response.data);
         prepareChartData(response.data?.charts || null); // ✅ use response data directly
-        console.log("Dashboard API Response:", response.data);
-        console.log("Recent Tasks:", response.data.recentTasks);
+     
       }
     } catch (error) {
       console.error("Failed to fetch dashboard data", error);
