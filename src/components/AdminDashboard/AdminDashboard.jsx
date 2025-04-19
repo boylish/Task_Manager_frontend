@@ -105,7 +105,7 @@ const AdminDashboard = () => {
 
       {/* Charts */}
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-white shadow-sm px-8 py-6 rounded-lg border">
+        <div className="bg-white shadow-sm px-8 py-6 rounded-lg ">
           <h2 className="text-lg font-semibold mb-4">Task Distribution</h2>
           <CustomPieChart data={pieChartData} color={COLORS} />
         </div>
