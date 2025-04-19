@@ -83,15 +83,9 @@ const SelectUsers = ({ selectedUsers = [], setSelectedUsers }) => {
                       key={user._id}
                       className="flex items-center bg-gray-100 rounded-full px-3 py-1"
                     >
-                      {user?.profileImage?.startsWith("http") ? (
-                        <img
-                          src={user.profileImage}
-                          alt="Profile"
-                          className="h-6 w-6 rounded-full mr-2"
-                        />
-                      ) : (
+                    
                         <FaUserCircle className="text-gray-400 mr-2" />
-                      )}
+                     
                       <span className="text-sm">
                         {user?.name || user?.email || "Unknown User"}
                       </span>
