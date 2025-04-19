@@ -40,15 +40,9 @@ const Sidebar = ({ isOpen }) => {
         {/* User Info */}
         <div className="flex flex-col items-center justify-center gap-3 bg-gray-100 p-6 rounded-md">
           <div className="h-24 w-24 overflow-hidden rounded-full border-2 border-blue-300 flex items-center justify-center bg-gray-100 text-gray-400">
-            {user.profileImage ? (
-              <img
-                src={user.profileImage}
-                alt="User"
-                className="object-cover h-24 w-24"
-              />
-            ) : (
+          
               <FaUserCircle className="h-20 w-20" />
-            )}
+            
           </div>
           <div className="flex flex-col gap-2 items-center text-center">
             <span className="text-white text-sm bg-blue-600 px-3 py-0.5 rounded-md">
